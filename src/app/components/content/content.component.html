@@ -1,5 +1,5 @@
-<div id="content">
-  <!--普通数据绑定{{}}-->
+<!--<div id="content">
+  &lt;!&ndash;普通数据绑定{{}}&ndash;&gt;
   <p>
     {{text1}}
   </p>
@@ -8,14 +8,14 @@
     {{text2}}
   </div>
 
-  <!--html内容绑定：
-    [innerHTML]="变量"-->
+  &lt;!&ndash;html内容绑定：
+    [innerHTML]="变量"&ndash;&gt;
   <hr>
   <div [innerHTML]="text2"></div>
 
-  <!--实现属性绑定的方法：
+  &lt;!&ndash;实现属性绑定的方法：
   1：属性名="{{属性变量}}"
-  2：[属性名]="属性变量"-->
+  2：[属性名]="属性变量"&ndash;&gt;
   <hr>
   <p title="{{text3}}">
     欢迎来到Angular5!!!!!!!!!!
@@ -36,10 +36,30 @@
       Jeffrey!!
   </p>
 
+
   <hr>
-  <p [ngStyle]="allStyle"}>
-    Jeffrey!!!!!
+  <p class="style" class="{{custom}}">
+    JeffreyLImaojia
+  </p>
+
+  <hr>
+  <p [ngClass]="allClass" class="{{custom}}">
+    JeffreyLImaojia
   </p>
 
 
+</div>-->
+
+<div id = "content">
+
+  <p *ngIf="arr.length == 0">
+    无学员信息！
+  </p>
+
+
+  <ul>
+    <li *ngFor="let item of arr; let i = index">
+      {{i}}---{{item.name}}---{{item.age}}
+    </li>
+  </ul>
 </div>

@@ -1,0 +1,7 @@
+<app-nav #nav [title] = "title" [showMessage] = "showMessage" (event)="getDataFromChild($event)"></app-nav>
+<h1>{{title}}</h1>
+
+
+<button (click)="nav.childMeath1()">调用子组件方法</button>
+
+<button (click)="getDataFromChild2()">调用子组件数据</button>
