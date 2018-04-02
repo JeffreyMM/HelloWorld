@@ -1,3 +1,45 @@
 <div id="content">
+  <!--普通数据绑定{{}}-->
+  <p>
+    {{text1}}
+  </p>
+  <hr>
+  <div>
+    {{text2}}
+  </div>
+
+  <!--html内容绑定：
+    [innerHTML]="变量"-->
+  <hr>
+  <div [innerHTML]="text2"></div>
+
+  <!--实现属性绑定的方法：
+  1：属性名="{{属性变量}}"
+  2：[属性名]="属性变量"-->
+  <hr>
+  <p title="{{text3}}">
+    欢迎来到Angular5!!!!!!!!!!
+  </p>
+
+  <hr>
+  <p [title]="text3">
+    欢迎来到Angular5的世界
+  </p>
+  <hr>
+  <p [style.color]="isRed?'red':'yellow'">
+    Jeffrey!!
+  </p>
+
+  <hr>
+  <p [style.color]="isRed?'red':'yellow'"
+  [style.font-size.px]="fontS?100:50">
+      Jeffrey!!
+  </p>
+
+  <hr>
+  <p [ngStyle]="allStyle"}>
+    Jeffrey!!!!!
+  </p>
+
 
 </div>
